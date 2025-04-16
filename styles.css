@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#map-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.ball {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    transition: all 0.1s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#ball1 {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+}
+
+#ball2 {
+    background: linear-gradient(45deg, #4ecdc4, #45b7af);
+}
+
+#score {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+#map-container {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.ball {
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+#map-container {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+/* 添加样式 */
+#center-score {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+}
+/* 添加标签样式 */
+.player-label {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    transform: translate(-50%, -120%);
+    white-space: nowrap;
+    z-index: 100;
+}

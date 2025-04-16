@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>星球大战</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window._AMapSecurityConfig = {
+            securityJsCode: 'bb2828c68a0d192277f3249c39f6c392' // 如：'7d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a'
+        };
+        </script>
+    <script src="https://webapi.amap.com/maps?v=2.0&key=c6fe4fd41a6e4ba09048bcd97407a1ff"></script>
+</head>
+<body>
+    <div id="center-score"></div>
+    
+    <div id="map-container"></div>
+    <div id="ball1" class="ball"></div>
+    <div id="ball2" class="ball"></div>
+    <div id="player1-label" class="player-label">玩家1</div>
+    <div id="player2-label" class="player-label">玩家2</div>
+    <div id="score">
+        玩家1: <span id="score1">0</span> 
+        玩家2: <span id="score2">0</span>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
